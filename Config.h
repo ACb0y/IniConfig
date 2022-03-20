@@ -13,7 +13,13 @@ namespace Config {
 
 class Value {
 public:
+  Value() {
+    // do nothing
+  }
   Value(std::string data) {
+    this->data = data;
+  }
+  void SetData(std::string data) {
     this->data = data;
   }
   int32_t Int32() {
@@ -67,7 +73,10 @@ class Ini {
 public:
   void Dump();
   bool Load(std::string fileName);
-  bool GetStrValue(std::string section, std::string key, std::string& value);
+  std::string GetStrValue(std::string section, std::string key, std::string defaultValue);
+  std::map<std::string, std::map<std::string, std::string> > & GetCfg() {
+    return cfg;
+  }
 private:
   void setSectionKeyValue(std::string& section, std::string& key, std::string & value);
   bool parseLine(std::string& line, std::string& section, std::string& key, std::string& value);

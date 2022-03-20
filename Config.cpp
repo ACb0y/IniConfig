@@ -79,16 +79,14 @@ bool Ini::Load(std::string fileName) {
   return true;
 }
 
-bool Ini::GetStrValue(std::string section, std::string key, std::string& value) {
-  value = "";
+std::string Ini::GetStrValue(std::string section, std::string key, std::string defaultValue) {
   if (cfg.find(section) == cfg.end()) {
-    return false;
+    return defaultValue;
   }
   if (cfg[section].find(key) == cfg[section].end()) {
-    return false;
+    return defaultValue;
   }
-  value = cfg[section][key];
-  return true;
+  return cfg[section][key];
 }
 
 bool Ini::parseLine(std::string& line, std::string& section, std::string& key, std::string& value) {
