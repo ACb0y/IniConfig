@@ -118,5 +118,6 @@ int main(int argc, char* argv[]) {
   cout << "MaxLoop = " << demoConfig.server.MaxLoop.Int64() << endl;
   cout << "Name = " << demoConfig.Busi.Name.String() << endl;
   cout << "Age = " << demoConfig.Busi.Age.UInt32() << endl;
+
   return 0;
 }
