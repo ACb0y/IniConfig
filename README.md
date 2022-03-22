@@ -23,4 +23,4 @@
 - 在当前目录下执行`./ConfigTool -iniFile ./demo.cfg -customClass Demo`命令，会自动生成一个DemoConfig.h的头文件。
 - 使用DemoConfig.h这个头文件中生成的代码，就可以实现对demo.cfg配置文件的读取，具体的使用方式可以查看Tool下的Main.cpp实现。
 ## 4.其他
-- Tool目录下的CmdLine类是本人另外的一个开源库，这个开源库实现了命令行参数的解析，并实现了一套易用的封装，实现思路是借鉴了go的flag包。
+- Tool目录下的CmdLine类是本人另外的一个开源库，这个开源库实现了命令行参数的解析，并实现了一套易用的封装，实现思路是借鉴了go的flag包，传送门：https://github.com/ACb0y/CmdLine 。
